@@ -1,0 +1,88 @@
+<div class="main gap25 display-flex flex-column">
+    <h1>Add Task</h1>
+    <form id="form" class="add-task-form gap50 display-flex space-evenly transition">
+        <div class="display-flex flex-column gap25 width100">
+            <div class="group">
+                <span>Title</span>
+                <input id="title" required placeholder="Enter A Title" class="input radius" type="text">
+            </div>
+            <div class="group">
+                <span>Description</span>
+                <textarea id="description" required class="input text-area radius padding5"
+                    placeholder="Enter A Description" cols="5" rows="5"></textarea>
+            </div>
+            <div class="group">
+                <span>Category</span>
+                <div id="fake-dropdown-full" class="fake-dropdown transition radius">
+                    <div onclick="toggleDropDown()" class="fake-option-main cursor-pointer space-between">
+                        <span id="selected-category">Select Category</span>
+                        <div id="arrow">▲</div>
+                    </div>
+                    <div class="display-none display-flex flex-column" id="fake-dropdown">
+                        <div onclick="addNewCategory()" class="fake-option cursor-pointer transition">Add New Category
+                        </div>
+                    </div>
+                </div>
+                <div id="select-input" class="display-flex align-center gap25 display-none">
+                    <input id="check1-input" placeholder="Add New Category" type="text" class="input radius">
+                    <div onclick="check1()" id="check1" class="board-plus transition"><div class="display-flex align-center justify-center icon-bigger rotate45">✕</div></div>
+                </div>
+            </div>
+            <div class="group">
+                <span>Assigned To</span>
+                <div class="fake-dropdown transition radius">
+                    <div onclick="toggleDropDown2()" class="fake-option-main cursor-pointer space-between">
+                        <span>Select Contact</span><div id="arrow2">▲</div>
+                    </div>
+                    <div id="contacts-dropdown" class="display-none display-flex flex-column">
+                        <div onclick="addContact()" class="cursor-pointer space-between align-center fake-option">
+                            <div class="display-flex align-center gap10">
+                                <span id="name">Add Contact</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="assigned-contacts" class="display-flex align-center">
+
+                </div>
+            </div>
+        </div>
+        <div class="verticalV2 mobile-none"></div>
+        <div class="display-flex flex-column space-between width100">
+            <div class="display-flex flex-column gap25">
+                <div class="group">
+                    <span>Due - Date</span>
+                    <input required id="due-date" class="input radius" type="date">
+                </div>
+                <div class="group">
+                    <span>Priority</span>
+                    <div class="display-flex gap20">
+                        <div id="urgent" class="radius cursor-pointer button-red transition"><span>Urgent</span><img
+                                src="./images/board/urgent.svg" alt="urgent"></div>
+                        <div id="medium" class="radius cursor-pointer medium button-yellow transition">
+                            <span>Medium</span><img src="./images/board/medium.svg" alt="low">
+                        </div>
+                        <div id="low" class="radius cursor-pointer button-green transition"><span>Low</span><img
+                                src="./images/board/low.svg" alt="medium"></div>
+                    </div>
+                </div>
+                <div class="group">
+                    <span>Subtasks</span>
+                    <div class="display-flex align-center gap25">
+                        <input id="check2-input" placeholder="Add New Subtask" class="input radius" type="text">
+                        <div id="check2" class="board-plus transition"><div class="display-flex align-center justify-center icon-bigger rotate45">✕</div></div>
+                    </div>
+                    <div id="check2-div" class="display-flex flex-column"></div>
+                </div>
+            </div>
+            <div class="add-task-absolute">
+                <button id="clear" onclick="initiateAddTask()" class="button-bright-black radius cursor-pointer transition">
+                    <span>Clear ⛌</span>
+                </button>
+                <button type="submit" form="form" class="button-dark-white radius cursor-pointer transition">
+                    <div class="display-flex justify-center align-center gap10">Create Task <div class="rotate45">⛌</div></div>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

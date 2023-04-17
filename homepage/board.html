@@ -1,0 +1,59 @@
+<div class="display-flex flex-column main gap25">
+    <div class="board-flex display-flex space-between">
+        <h1>Board</h1>
+        <div class="board-flex display-flex align-center gap25">
+            <input id="search" oninput="renderTasks()" class="input radius zoom" type="text" placeholder="Find Task">
+            <button onclick="popUpAddTask()" class="button-dark-white cursor-pointer radius gap10 display-flex align-center">Add Task <div class="rotate45">✕</div></button>
+        </div>
+    </div>
+    <div class="display-flex sections">
+        <div class="section">
+            <div class="status">
+                <h3 class="board-heading">To - Do</h3>
+                <div class="board-plus transition" onclick="popUpAddTask('toDo')"><div class="display-flex align-center justify-center icon-bigger rotate45">✕</div></div>
+            </div>
+            <div ondragleave="this.style.backgroundColor ='#F6F7F8'"
+                ondragover="event.preventDefault(); this.style.backgroundColor = '#091931'"
+                ondrop="drop(event, this); this.style.backgroundColor ='#F6F7F8'" id="toDo"
+                class="section-content cursor-pointer transition radius">
+
+            </div>
+        </div>
+        <div class="section">
+            <div class="status">
+                <h3 class="board-heading">In Progress</h3>
+                <div class="board-plus transition" onclick="popUpAddTask('inProgress')"><div class="display-flex align-center justify-center icon-bigger rotate45">✕</div></div>
+            </div>
+            <div ondragleave="this.style.backgroundColor ='#F6F7F8'"
+                ondragover="event.preventDefault(); this.style.backgroundColor = '#091931'"
+                ondrop="drop(event, this); this.style.backgroundColor ='#F6F7F8'" id="inProgress"
+                class="section-content cursor-pointer transition radius">
+
+            </div>
+        </div>
+        <div class="section">
+            <div class="status">
+                <h3 class="board-heading">Awaiting Feedback</h3>
+                <div class="board-plus transition" onclick="popUpAddTask('awaitingFeedback')"><div class="display-flex align-center justify-center icon-bigger rotate45">✕</div></div>
+            </div>
+            <div ondragleave="this.style.backgroundColor ='#F6F7F8'"
+                ondragover="event.preventDefault(); this.style.backgroundColor = '#091931'"
+                ondrop="drop(event, this); this.style.backgroundColor ='#F6F7F8'" id="awaitingFeedback"
+                class="section-content cursor-pointer transition radius">
+
+            </div>
+        </div>
+        <div class="section">
+            <div class="status">
+                <h3 class="board-heading">Done</h3>
+                <div class="board-plus transition" onclick="popUpAddTask('done')"><div class="display-flex align-center justify-center icon-bigger rotate45">✕</div></div>
+            </div>
+            <div ondragleave="this.style.backgroundColor ='#F6F7F8'"
+                ondragover="event.preventDefault(); this.style.backgroundColor = '#091931'"
+                ondrop="drop(event, this); this.style.backgroundColor ='#F6F7F8'" id="done"
+                class="section-content cursor-pointer transition radius">
+
+            </div>
+        </div>
+    </div>
+</div>

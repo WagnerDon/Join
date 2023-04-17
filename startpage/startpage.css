@@ -1,0 +1,93 @@
+body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #F6F7F8;
+            height: 100vh;
+        }
+        .animation-background
+        {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            background-color: transparent;
+            animation: animation-background ease-in-out;
+        }
+        @keyframes animation-background
+        {
+            0% 
+            {
+                background-color: #F6F7F8;
+            }
+            50%
+            {
+                background-color: #F6F7F8;
+            }  
+        }
+        .join-logo
+        {
+            height: 10vw;
+            width: 10vw;
+            position: absolute;
+            top: 1.5625rem;
+            left: 1.5625rem;
+            z-index: 2;
+            animation: join-logo ease-in-out;
+        }
+        @keyframes join-logo
+        {
+            0% 
+            {
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                scale: 2;
+            }
+        }
+        .not-a-join-user
+        {
+            position: absolute;
+            top: 1.5625rem;
+            right: 1.5625rem;
+        }
+        .wrong-password
+        {
+            color: #FF5733;
+            margin-top: 0.3125rem;
+        }
+        @media (width < 23.75rem)
+        {
+            .underline
+            {
+                height: unset;
+            }
+        }
+        @media (width < 20rem)
+        {
+            .not-a-join-user p
+            {
+                display: none;
+            }
+            .input
+            {
+                width: unset;
+            }
+            .two-elementV2
+            {
+                gap: 1.5625rem;
+                flex-direction: column;
+            }
+        }
+        .dont-worry
+        {
+            text-align: center;
+        }       
+        span
+        {
+            text-decoration: underline;
+            color: #A8A8A8;
+        }    

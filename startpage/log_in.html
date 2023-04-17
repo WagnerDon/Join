@@ -1,0 +1,25 @@
+<div id="card" class="card radius">
+<div class="two-element not-a-join-user">
+    <p>Not A Join User?</p>
+    <button id="sign-up" class="button-dark-white radius cursor-pointer transition">Sign Up</button>
+</div>
+<h1 class="underline">Log In</h1>
+        <form id="form" class="form" onsubmit="return false">
+            <input id="email" required class="input radius email" placeholder="Email" type="email">
+            <div class="flex-column">
+                <input required id="password" class="input radius password" placeholder="Password" type="password">
+                <p id="wrong-password" class="wrong-password display-none">Wrong Password Or Email</p>
+            </div>
+            <div class="two-elementV2">
+                <div id="checkbox" class="two-element cursor-pointer">
+                    <input class="cursor-pointer" type="checkbox">
+                    <p>Remember Me</p>
+                </div>
+                <p id="forgot-password" class="forgot-my-password cursor-pointer">Forgot My Password</p>
+            </div>
+        </form>
+        <div class="two-element">
+            <input type="submit" form="form" class="button-dark-white radius cursor-pointer transition" value="Log In">
+            <button id="guest-log-in" class="button-bright-black radius cursor-pointer transition">Guest Log In</button>
+        </div>
+    </div>

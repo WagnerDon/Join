@@ -1,0 +1,14 @@
+<div id="card" class="card radius position-relative">
+<img id="back-arrow" class="cursor-pointer back-arrow" src="./images/icons/arrow_blue.svg" alt="back arrow">
+<h1 class="underline">Sign Up</h1>
+<form id="form" class="form" onsubmit="return false">
+    <input pattern="[A-Z][a-z]+" title="Only Letters, First Letter Upper Case, At Least 2 Characters" id="name" class="input radius name" required type="text" placeholder="Name">
+    <input pattern="[A-Z][a-z]+" title="Only Letters, First Letter Upper Case, At Least 2 Characters" id="surname" class="input radius name" required type="text" placeholder="Surname">
+    <input id="email" required class="input radius email" placeholder="Email" type="email">
+    <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Number, Upper Case, Lower Case, At Least 8 Characters" required id="password" class="input radius password" placeholder="Password" type="password">
+    <div class="flex-column">
+        <input value="Sign Up" class="button-dark-white radius cursor-pointer transition" type="submit">
+        <p id="wrong-password" class="wrong-password display-none">User Already Exists</p>
+    </div>
+</form>
+</div>

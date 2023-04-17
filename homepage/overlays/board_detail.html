@@ -1,0 +1,24 @@
+<div onclick="event.stopPropagation()" class="overlay-card display-flex gap10 flex-column radius">
+    <div class="display-flex">
+        <span id="category" class="padding3-5" style="border-radius: 5px;">CATEGORY</span>
+    </div>
+    <h2 class="break-word" style="font-size: xx-large;" id="headline">HEADLINE</h2>
+    <p id="description" class="break-word">DESCRIPTION</p>
+    <p class="display-flex align-center gap10"><b>Due Date:</b> <span id="due-date">01.01.2001</span></p>
+    <div class="display-flex align-center gap10">
+        <b>Priority:</b>
+        <div id="priority-background" class="display-flex align-center gap10 radius padding3-5">
+            <span id="priority">Medium</span>
+            <img id="priority-symbol" src="./images/board/medium.svg" alt="priority">
+        </div>
+    </div>
+    <div>
+        <p><b>Subtasks:</b></p>
+        <div id="subtasks"></div>
+    </div>
+    <p><b>Assigned To:</b></p>
+    <div id="assigned-to" class="display-flex flex-column gap10">
+        
+    </div>
+    <img onclick="boardDetailEdit()" class="button-dark-white radius cursor-pointer edit icon-standard" src="./images/board/edit.svg" alt="edit">
+</div>

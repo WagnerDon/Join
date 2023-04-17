@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- /Font -->
+    <meta charset="UTF-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="./images/favicon.svg">
+    <title>Join</title>
+    <link rel="stylesheet" href="./global_style.css">
+    <link rel="stylesheet" href="./homepage/homepage.css">
+    <script defer src="./mini_backend.js"></script>
+    <script defer src="./global_script.js"></script>
+    <script defer src="./homepage/homepage.js"></script>
+</head>
+<body>
+    <div id="overlay" onclick="this.classList.add('display-none'), this.children[0].remove()" w3-include-html class="display-none overlay"></div>
+    <div class="part1">
+        <img class="join-logo" src="./images/join_logoV2.svg" alt="join logo">
+        <div class="nav-collection">
+            <button id="summary" class="nav-button">
+                <img class="nav-button-size" src="./images/nav_buttons/summary.svg" alt="summary">
+                <div class="nav-style-div">
+                    <span class="mobile-none">Summary</span>
+                </div>
+            </button>
+            <button id="board" class="nav-button">
+                <img class="nav-button-size" src="./images/nav_buttons/board.svg" alt="board">
+                <div class="nav-style-div">
+                    <span class="mobile-none">Board</span>
+                </div>
+            </button>
+            <button id="add-task" class="nav-button">
+                <img class="nav-button-size" src="./images/nav_buttons/add_task.svg" alt="add task">
+                <div class="nav-style-div">
+                    <span class="mobile-none">Add Task</span>
+                </div>
+            </button>
+            <button id="contacts" class="nav-button">
+                <img class="nav-button-size" src="./images/nav_buttons/contacts.svg" alt="contacts">
+                <div class="nav-style-div">
+                    <span class="mobile-none">Contacts</span>
+                </div>
+            </button>
+        </div>
+        <button id="legal-notice" class="nav-button nav-buttonV2">
+            <img class="nav-button-size" src="./images/nav_buttons/legal_notice.svg" alt="legal notice">
+            <div class="nav-style-div">
+                <span class="mobile-none">Legal Notice</span>
+            </div>
+        </button>
+    </div>
+    <div class="part2">
+        <header>
+            <img class="join-logo2" src="./images/join_logo.svg" alt="join logo">
+            <p id="kanban-headline">Kanban Project Management Tool</p>
+            <div class="two-element">
+                <img src="./images/questionmark.svg" id="questionmark" class="nav-button-size cursor-pointer transition" alt="questionmark">
+                <span id="log-out" class="log-out">Log Out</span>
+            </div>
+        </header>
+        <div class="w3-include-html" w3-include-html="./homepage/summary.html"></div>
+    </div>
+</body>
+</html>

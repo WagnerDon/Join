@@ -1,0 +1,48 @@
+<form id="confirm-change" onclick="event.stopPropagation()" class="overlay-card display-flex gap10 flex-column radius">
+    <div class="group">
+        <span>Status</span>
+        <select id="select" class="input radius">
+            <option value="toDo">To - Do</option>
+            <option value="inProgress">In Progress</option>
+            <option value="awaitingFeedback">Awaiting Feedback</option>
+            <option value="done">Done</option>
+        </select>
+    </div>
+    <div class="group">
+        <span>Title</span>
+        <input required id="headline" class="input radius" type="text">
+    </div>
+    <div class="group">
+        <span>Description</span>
+        <textarea required id="description" class="input radius" type="text"></textarea>
+    </div>
+    <div class="group">
+        <span>Due Date</span>
+        <input required id="due-date" class="input radius" type="date">
+    </div>
+    <div class="group">
+        <span>Prio</span>
+        <div class="display-flex space-between">
+            <div id="urgent" class="radius cursor-pointer button-red transition"><span>Urgent</span><img
+                    src="./images/board/urgent.svg" alt="urgent"></div>
+            <div id="medium" class="radius cursor-pointer button-yellow transition"><span>Medium</span><img
+                    src="./images/board/medium.svg" alt="low"></div>
+            <div id="low" class="radius cursor-pointer button-green transition"><span>Low</span><img
+                    src="./images/board/low.svg" alt="medium"></div>
+        </div>
+    </div>
+    <div id="assigned-to" class="group">
+        <span>Assigned To</span>
+        <div class="fake-dropdown transition radius">
+            <div onclick="toggleDropDown2()" class="fake-option-main cursor-pointer space-between">
+                <span>Select Contact</span><div id="arrow2">▲</div>
+            </div>
+            <div id="contacts-dropdown" class="display-none display-flex flex-column">
+
+            </div>
+        </div>
+        <div id="assigned-contacts" class="display-flex align-center"></div>
+    </div>
+    <button class="button-dark-white radius cursor-pointer edit">OK <img
+            class="icon-standard" src="./images/board/check.svg" alt="check"></button>
+</form onsubmit=";return false">

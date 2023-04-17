@@ -1,0 +1,38 @@
+<div class="main contact-mobile display-flex padding-unset">
+    <div id="hide2" class="contact-list">
+        <div id="contact-stuff" class="letters gap10 display-flex flex-column"></div>
+    </div>
+    <div id="hide" class="glitch contact-info padding10-20 space-between">
+        <div class="contact-info gap25 position-relative">
+            <button class="contacts-x cursor-pointer display-flex align-center justify-center button-dark-white radius" onclick="document.getElementById('hide').classList.add('glitch'); document.getElementById('hide2').classList.remove('glitch')">✕</button>
+        <div class="display-flex align-center gap25">
+            <h1 class="mobile-none">Contacts</h1>
+            <div class="vertical mobile-none"></div>
+            <p class="mobile-none">Better With A Team</p>
+        </div>
+        <div class="display-flex align-center gap25">
+            <div id="letters" class="circle-large">AM</div>
+            <div class="display-flex flex-column">
+                <h1 id="name">Anton Maier</h1>
+                <p class="light-blue-color cursor-pointer" onclick="popUpAddTask()">Add Task +</p>
+            </div>
+        </div>
+        <div id="clone" class="display-flex align-center gap20">
+            <span>Contact Information</span>
+            <div id="edit-contact" class="display-flex align-center gap5 cursor-pointer"><img class="icon-standard" src="./images/contacts/edit.svg" alt="edit"><span>Edit Contact</span></div>
+        </div>
+        <div class="display-flex flex-column gap10">
+            <span><b>E-Mail</b></span>
+            <span id="email" class="forgot-my-password">anton@gmail.com</span>
+        </div>
+        <div class="display-flex flex-column gap10">
+            <span><b>Phone Number</b></span>
+            <span id="number">+30 11331 1213 533</span>
+        </div>
+        </div>
+        <button onclick="addContact()" class="button-dark-white radius edit cursor-pointer">
+            <span>New Contact</span>
+            <img class="icon-standard" src="./images/contacts/add_contact.svg" alt="add contact">
+        </button>
+    </div>
+</div>

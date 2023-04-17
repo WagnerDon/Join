@@ -1,0 +1,59 @@
+<div class="display-flex flex-column main mobile-gap gap15">
+    <div class="display-flex summary-headline">
+        <h1>Summary</h1>
+        <div class="vertical mobile-none"></div>
+        <p class="mobile-none">Everything In A Nutshell!</p>
+    </div>
+    <div class="display-flex gap25 align-center secondary">
+        <div onclick="initiateBoard()" class="cursor-pointer display-flex flex-column gap10 summary-box">
+            <div class="display-flex gap10">
+                <div class="card-small">
+                    <h1 id="total-tasks">1</h1>
+                    <p>Total<br> Tasks</p>
+                </div>
+                <div class="card-small">
+                    <h1 id="in-progress">1</h1>
+                    <p>In<br> Progress</p>
+                </div>
+                <div class="card-small">
+                    <h1 id="awaiting-feedback">1</h1>
+                    <p>Awaiting<br> Feedback</p>
+                </div>
+            </div>
+            <div class="card-big">
+                <div class="display-flex align-center space-between width">
+                    <img class="summary-icon" src="./images/summary/orange_arrow.svg" alt="orange arrow">
+                    <div>
+                        <h2 id="urgent-count">1</h2>
+                        <p>Urgent</p>
+                    </div>
+                </div>
+                    <div class="mobile-noneV2 grey-stripe"></div>
+                    <div class="display-flex flex-column width">
+                        <h3 id="dueDate">DATE</h3>
+                        <p>Upcoming Deadline</p>
+                    </div>
+            </div>
+            <div class="display-flex gap10">
+                <div class="card-medium">
+                    <img class="summary-icon" src="./images/summary/write.svg" alt="write">
+                    <div>
+                        <h1 id="toDo">1</h1>
+                        <p>To - Do</p>
+                    </div>
+                </div>
+                <div class="card-medium">
+                    <img class="summary-icon" src="./images/summary/check.svg" alt="check">
+                    <div>
+                        <h1 id="done">1</h1>
+                        <p>Done</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="greeting" class="text-align">
+            <h2 id="date">Hello,</h2>
+            <h1 id="user" class="light-blue-color">USER</h1>
+        </div>
+    </div>
+</div>
